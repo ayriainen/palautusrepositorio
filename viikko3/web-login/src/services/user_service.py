@@ -42,5 +42,14 @@ class UserService:
 
         # toteuta loput tarkastukset tänne ja nosta virhe virhetilanteissa
 
+        if not re.match("^[a-z]{3,}$", username):
+            raise UserInputError("Wrong username input")
+        
+        if password.isalpha() or len(password) < 8:
+           raise UserInputError("Password must be longer than 7 and not just contain letters")
+        
+        if password != password_confirmation:
+           raise UserInputError("Passwords must match")
+
 
 user_service = UserService()
