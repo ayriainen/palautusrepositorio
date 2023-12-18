@@ -2,7 +2,7 @@ class Tekoaly:
     def __init__(self):
         self._siirto = 0
 
-    def anna_siirto(self):
+    def annaSiirto(self):
         self._siirto = self._siirto + 1
         self._siirto = self._siirto % 3
 
@@ -13,6 +13,6 @@ class Tekoaly:
         else:
             return "s"
 
-    def aseta_siirto(self, siirto):
+    def asetaSiirto(self, siirto):
         # ei tehdä mitään
         pass

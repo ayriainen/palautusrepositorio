@@ -6,10 +6,10 @@ class Tuomari:
         self.tokan_pisteet = 0
         self.tasapelit = 0
 
-    def kirjaa_siirto(self, ekan_siirto, tokan_siirto):
+    def kirjaaSiirto(self, ekan_siirto, tokan_siirto):
         if self._tasapeli(ekan_siirto, tokan_siirto):
             self.tasapelit = self.tasapelit + 1
-        elif self._eka_voittaa(ekan_siirto, tokan_siirto):
+        elif self._ekaVoittaa(ekan_siirto, tokan_siirto):
             self.ekan_pisteet = self.ekan_pisteet + 1
         else:
             self.tokan_pisteet = self.tokan_pisteet + 1
@@ -25,7 +25,7 @@ class Tuomari:
         return False
 
     # sisäinen metodi joka tarkastaa voittaako eka pelaaja tokan
-    def _eka_voittaa(self, eka, toka):
+    def _ekaVoittaa(self, eka, toka):
         if eka == "k" and toka == "s":
             return True
         elif eka == "s" and toka == "p":
